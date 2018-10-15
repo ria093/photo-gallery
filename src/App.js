@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PhotoGallery from './components/PhotoGallery';
-import './App.css';
+import { AppWrapper } from './styles/StyledApp';
+
 
 const photos = [
   {
@@ -19,9 +20,9 @@ const photos = [
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <AppWrapper>
         <PhotoGallery photos={photos}/>
-      </div>
+      </AppWrapper>
     );
   }
 }
