@@ -5,7 +5,7 @@ export const Arrow = styled.button`
   background-color: rgba(0, 0, 0, 0.3);
   border: none;
   cursor: pointer;
-  margin-top: -57px;
+  margin: -57px 0 0 0;
   padding: ${props => 
     (props.previous ? '30px 14px 30px 12px' : '30px 12px 30px 14px')};
   position: absolute;

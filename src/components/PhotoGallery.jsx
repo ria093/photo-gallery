@@ -10,7 +10,10 @@ class PhotoGallery extends React.Component {
     super(props);
     this.state = {
       currentSlide: 0,
+      touchStartX: 0,
     }
+    this.handleTouchStart = this.handleTouchStart.bind(this);
+    this.handleTouchEnd = this.handleTouchEnd.bind(this);
   }
 
   handleClick(index) {
@@ -18,6 +21,19 @@ class PhotoGallery extends React.Component {
     if (index < 0) index += galleryLength;
     if (index > galleryLength) index = index % galleryLength;
     this.setState({ currentSlide: index });
+  }
+
+  handleTouchStart(e) {
+    this.setState({'touchStartX': e.changedTouches[0].screenX})
+  }
+
+  handleTouchEnd(e) {
+    const swipeDistance = this.state.touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(swipeDistance) > constants.MIN_SWIPE_DISTANCE) {
+      (swipeDistance > 0) ? 
+        this.handleClick(this.state.currentSlide + 1) :
+        this.handleClick(this.state.currentSlide - 1);
+    }
   }
 
   render() {
@@ -41,7 +57,7 @@ class PhotoGallery extends React.Component {
     return (
       <GalleryWrapper>
         <Previous />
-        <SlidesWrapper offset={offset}>
+        <SlidesWrapper offset={offset} onTouchStart={this.handleTouchStart} onTouchEnd={this.handleTouchEnd} >
           { photos.map( photo => <Photo key={photo.id} url={photo.url} caption={photo.caption} /> ) }
         </SlidesWrapper>
         <Next />

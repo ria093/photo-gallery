@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PhotoWrapper, Image, Caption } from '../styles/StyledPhoto';
+import { Caption, Image, PhotoWrapper } from '../styles/StyledPhoto';
 
 const Photo = (props) => {
   return (
