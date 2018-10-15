@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Exception from './Exception';
 import Photo from './Photo';
 import { Arrow, GalleryWrapper, SlidesWrapper } from '../styles/StyledPhotoGallery';
+import constants from '../lib/constants';
 
 class PhotoGallery extends React.Component {
   constructor(props) {
@@ -22,16 +24,16 @@ class PhotoGallery extends React.Component {
     const { photos } = this.props;
     const offset = this.state.currentSlide < photos.length ? -this.state.currentSlide * 100 : 0;
 
-    if (photos.length === 0) return 'empty gallery';
+    if (photos.length === 0) return <Exception msg={constants.EMPTY_GALLERY_MSG} />;;
 
     const Previous = () => (
-      <Arrow previous onClick={() => this.handleClick(this.state.currentSlide - 1)} >
+      <Arrow previous tabIndex='1' onClick={() => this.handleClick(this.state.currentSlide - 1)} >
         <span>Previous</span>
       </Arrow>
     );
     
     const Next = () => (
-      <Arrow next onClick={() => this.handleClick(this.state.currentSlide + 1)} >
+      <Arrow next tabIndex='2' onClick={() => this.handleClick(this.state.currentSlide + 1)} >
         <span>Next</span>
       </Arrow>
     );
