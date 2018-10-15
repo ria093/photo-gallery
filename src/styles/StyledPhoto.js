@@ -16,7 +16,8 @@ export const Caption = styled.h3`
 `
 
 export const Image = styled.span`
-  background: url('${props => props.url}'), url('${imageNotFound}') center;
+  background: url('${props => props.url}'), url('${imageNotFound}');
+  background-position: center center;
   background-size: cover;
   display: inline-block;
   height: 100%;
@@ -29,4 +30,3 @@ export const PhotoWrapper = styled.div`
   position: relative;
   width: 100%;
 `
-
