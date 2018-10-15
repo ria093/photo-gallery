@@ -1,0 +1,5 @@
+export const ICON_NEXT_WHITE =
+  'data:image/svg+xml,%3Csvg%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2022%22%3E%3Cstyle%3E.st0%7Bfill%3A%23fff%3Bstroke%3A%23fff%3Bstroke-width%3A.5%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M1.4%201c-.2%200-.3.2-.4.4%200%20.2%200%20.4.2.5L9.9%2011l-8.8%209.1c-.1.1-.1.3-.1.5s.1.3.3.4.3%200%20.4-.1l9.1-9.5c.1-.1.1-.2.1-.4s-.1-.3-.1-.4L1.7%201.1C1.6%201%201.5%201%201.4%201z%22%2F%3E%3C%2Fsvg%3E';
+
+export const ICON_PREV_WHITE =
+  'data:image/svg+xml,%3Csvg%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%2022%22%3E%3Cstyle%3E.st0%7Bfill%3A%23fff%3Bstroke%3A%23fff%3Bstroke-width%3A.5%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M10.6%2021c.2%200%20.3-.2.4-.4s0-.4-.1-.6l-8.8-9%208.8-9.1c.1-.1.1-.3.1-.5s-.1-.3-.3-.4-.3%200-.4.1l-9.1%209.5c-.1.1-.2.3-.2.4s.1.3.1.4l9.1%209.5c.2.1.3.1.4.1z%22%2F%3E%3C%2Fsvg%3E';
